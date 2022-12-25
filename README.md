@@ -21,5 +21,5 @@ pip install pyqt5-tools
 
 3. Install pyqt5 Extension on VSCode
 
-![image](https://user-images.githubusercontent.com/53118499/209476841-cfcb619b-0e2b-4dd4-9b60-d54ba63d97a2.png)
+![image](https://user-images.githubusercontent.com/53118499/209476849-88f2b062-e953-493b-a76e-880390ebe19c.png)
 
