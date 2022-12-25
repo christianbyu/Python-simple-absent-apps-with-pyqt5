@@ -2,7 +2,7 @@
 
 # Dependencies
 
-- python V.3
+- python 3.9.13
 - pyqt5
 
 # Installation
@@ -23,3 +23,8 @@ pip install pyqt5-tools
 
 ![image](https://user-images.githubusercontent.com/53118499/209476849-88f2b062-e953-493b-a76e-880390ebe19c.png)
 
+# How to Use
+
+1. run ```main.py``` file, and you can get display like this ....
+
+![image](https://user-images.githubusercontent.com/53118499/209476881-d8ff64fc-812e-4092-a09f-40bb85b931d6.png)
