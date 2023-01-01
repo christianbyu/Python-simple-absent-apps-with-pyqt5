@@ -1,4 +1,5 @@
 import sys
+import sqlite3
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
@@ -8,7 +9,7 @@ class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
         loadUi("login_baru.ui",self)
-        self.loginbutton.clicked.connect(self.pilihan)
+        self.loginbutton.clicked.connect(self.login)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreate)
 
@@ -16,6 +17,27 @@ class Login(QDialog):
         email=self.email.text()
         password=self.password.text()
         print("Successfully logged in with email: ", email, "and password:", password)
+
+    #defining login function
+    def login(username, password, message):
+        #getting form data
+        uname=username.get()
+        pwd=password.get()
+        #applying empty validation
+        if uname=='' or pwd=='':
+            message.set("fill the empty field!!!")
+        else:
+        #open database
+            conn = sqlite3.connect('./database/db_absen.db')
+            print("Berhasil terkoneksi ke DB")
+        #select query
+            cursor = conn.execute('SELECT from db_user where Username="%s" and Passwd="%s"'%(uname,pwd))
+        #fetch data 
+            if cursor.fetchone():
+                message.set("Login Berhasil!!")
+                Pilihan()
+            else:
+                message.set("Username atau Email dan Password Salah!!!")
     
     def pilihan(self):
         pilih=Pilihan() 

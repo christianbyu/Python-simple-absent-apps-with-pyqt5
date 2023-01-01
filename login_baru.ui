@@ -31,12 +31,12 @@
     <rect>
      <x>30</x>
      <y>40</y>
-     <width>47</width>
-     <height>13</height>
+     <width>81</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Email</string>
+    <string>Username/Email</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -57,7 +57,7 @@
     <rect>
      <x>120</x>
      <y>40</y>
-     <width>113</width>
+     <width>151</width>
      <height>20</height>
     </rect>
    </property>
@@ -67,7 +67,7 @@
     <rect>
      <x>120</x>
      <y>80</y>
-     <width>113</width>
+     <width>151</width>
      <height>20</height>
     </rect>
    </property>

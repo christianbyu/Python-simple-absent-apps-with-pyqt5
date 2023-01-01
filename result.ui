@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>345</width>
-    <height>204</height>
+    <height>299</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,14 +16,27 @@
   <widget class="QPushButton" name="KembaliLogin">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>120</x>
      <y>100</y>
-     <width>75</width>
-     <height>23</height>
+     <width>111</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
     <string>Kembali</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>40</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Absen Selesai!</string>
    </property>
   </widget>
  </widget>

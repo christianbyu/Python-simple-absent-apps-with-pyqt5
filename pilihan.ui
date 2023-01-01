@@ -19,10 +19,10 @@
   <widget class="QPushButton" name="AbsenMasuk">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>70</y>
-     <width>75</width>
-     <height>23</height>
+     <x>130</x>
+     <y>50</y>
+     <width>121</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -32,10 +32,10 @@
   <widget class="QPushButton" name="AbsenKeluar">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>100</y>
-     <width>75</width>
-     <height>23</height>
+     <x>130</x>
+     <y>120</y>
+     <width>121</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
