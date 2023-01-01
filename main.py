@@ -1,5 +1,7 @@
 import sys
+import tkinter
 import sqlite3
+from tkinter import *
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5.uic import loadUi
@@ -18,13 +20,13 @@ class Login(QDialog):
         password=self.password.text()
         # Apabila email dan password kosong atau NULL
         if email=='' or password=='':
-            print("fill the empty field!!!")
+            print("Email dan Password tidak boleh Kosong!!!")
         else:
         # Open database
             conn = sqlite3.connect('./database/db_absen.db')
             print("Berhasil terkoneksi ke DB")
         # Select query
-            cursor = conn.execute('SELECT * from db_user where Username="%s" and Passwd="%s"'%(email,password))
+            cursor = conn.execute('SELECT * from db_user where Email="%s" and Passwd="%s"'%(email,password))
         # Fetch data 
             if cursor.fetchone():
                 print("Login Berhasil!!")
@@ -32,7 +34,7 @@ class Login(QDialog):
                 widget.addWidget(pilih)
                 widget.setCurrentIndex(widget.currentIndex()+1)
             else:
-                print("Username atau Email dan Password Salah!!!")
+                print("Email dan Password Salah!!!")
 
     def gotocreate(self):
         createacc=CreateAcc()
@@ -71,9 +73,26 @@ class Masuk(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def Submit(self):
-        submit=Result() 
-        widget.addWidget(submit)
-        widget.setCurrentIndex(widget.currentIndex()+1)
+        nip=self.nip.setInputMask("00")
+        nama=self.nama.text()
+        tanggal=self.tanggal.setInputMask("00/00/0000")
+        waktu=self.waktu.setInputMask("00:00")
+        # Apabila email dan password kosong atau NULL
+        if nip==''or nama=='' or tanggal=='' or waktu=='':
+            print("Data tidak boleh Kosong!!!")
+        else:
+        # Open database
+            conn = sqlite3.connect('./database/db_absen.db')
+            print("Berhasil terkoneksi ke DB")
+        # Insert query
+        cursor = conn.execute("INSERT INTO db_user (NIP, Nama, Email, Passwd) VALUES",(nip,nama,tanggal,waktu))
+        # Fetch data 
+        if cursor.fetchone():
+            submit=Result() 
+            widget.addWidget(submit)
+            widget.setCurrentIndex(widget.currentIndex()+1)
+        else:
+            print("Masukan data dengan Benar!!!")
 
 # Fungsi pada keluar.ui
 class Keluar(QDialog):

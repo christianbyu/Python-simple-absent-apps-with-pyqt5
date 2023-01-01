@@ -26,7 +26,7 @@
     <string>Submit</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="nip">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -49,7 +49,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Nama</string>
+    <string>NIP</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -62,7 +62,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>NIP</string>
+    <string>Nama</string>
    </property>
   </widget>
   <widget class="QPushButton" name="MKembali">
@@ -78,7 +78,7 @@
     <string>Kembali</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="nama">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -91,11 +91,11 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="tanggal">
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>70</y>
+     <y>90</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -108,46 +108,33 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>70</y>
+     <y>90</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Hari</string>
+    <string>Tangal</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>100</y>
+     <y>140</y>
      <width>81</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tanggal</string>
+    <string>Waktu</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="waktu">
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>100</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>130</y>
+     <y>140</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -159,40 +146,27 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>130</y>
-     <width>81</width>
+     <x>120</x>
+     <y>70</y>
+     <width>151</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Bulan</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>160</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
+    <string>Contoh : 10 01 2022</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>81</width>
+     <x>120</x>
+     <y>120</y>
+     <width>151</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Tahun</string>
+    <string>Contoh : 07, 20, 24</string>
    </property>
   </widget>
  </widget>
