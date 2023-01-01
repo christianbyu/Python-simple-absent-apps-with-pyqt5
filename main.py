@@ -9,40 +9,30 @@ class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
         loadUi("login_baru.ui",self)
-        self.loginbutton.clicked.connect(self.login)
+        self.loginbutton.clicked.connect(self.loginfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreate)
 
     def loginfunction(self):
         email=self.email.text()
         password=self.password.text()
-        print("Successfully logged in with email: ", email, "and password:", password)
-
-    #defining login function
-    def login(username, password, message):
-        #getting form data
-        uname=username.get()
-        pwd=password.get()
-        #applying empty validation
-        if uname=='' or pwd=='':
-            message.set("fill the empty field!!!")
+        # Apabila email dan password kosong atau NULL
+        if email=='' or password=='':
+            print("fill the empty field!!!")
         else:
-        #open database
+        # Open database
             conn = sqlite3.connect('./database/db_absen.db')
             print("Berhasil terkoneksi ke DB")
-        #select query
-            cursor = conn.execute('SELECT from db_user where Username="%s" and Passwd="%s"'%(uname,pwd))
-        #fetch data 
+        # Select query
+            cursor = conn.execute('SELECT * from db_user where Username="%s" and Passwd="%s"'%(email,password))
+        # Fetch data 
             if cursor.fetchone():
-                message.set("Login Berhasil!!")
-                Pilihan()
+                print("Login Berhasil!!")
+                pilih=Pilihan() 
+                widget.addWidget(pilih)
+                widget.setCurrentIndex(widget.currentIndex()+1)
             else:
-                message.set("Username atau Email dan Password Salah!!!")
-    
-    def pilihan(self):
-        pilih=Pilihan() 
-        widget.addWidget(pilih)
-        widget.setCurrentIndex(widget.currentIndex()+1)
+                print("Username atau Email dan Password Salah!!!")
 
     def gotocreate(self):
         createacc=CreateAcc()
@@ -120,7 +110,7 @@ class CreateAcc(QDialog):
     def __init__(self):
         super(CreateAcc,self).__init__()
         loadUi("createacc_baru.ui",self)
-        self.signupbutton.clicked.connect(self.crseateaccfunction)
+        self.signupbutton.clicked.connect(self.createaccfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
 
