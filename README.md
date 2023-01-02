@@ -4,6 +4,7 @@
 
 - python 3.9.13
 - pyqt5
+- sqlite3
 
 # Installation
 
