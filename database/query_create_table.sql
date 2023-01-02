@@ -2,7 +2,6 @@
 
 CREATE TABLE db_user (
 ID INTEGER PRIMARY KEY AUTOINCREMENT,
-NIP INTEGER NOT NULL,
 Nama TEXT NOT NULL,
 Email TEXT NOT NULL,
 Username TEXT NOT NULL,
@@ -10,20 +9,19 @@ Passwd TEXT NOT NULL
 );
 
 --- Create Admin user Manually
-INSERT INTO db_user (ID, NIP, Nama, Email, Username, Passwd) VALUES (1, 123456, 'Admin', 'Admin@google.com', 'Admin', 'AdminAdmin');
+INSERT INTO db_user (ID, Nama, Email, Username, Passwd) VALUES (1, 'Admin', 'Admin@google.com', 'Admin', 'Admin');
 
+--- Query for
 CREATE TABLE db_absen_masuk (
-ID INTEGER PRIMARY KEY AUTOINCREMENT,
-NIP INTEGER NOT NULL,
 Nama TEXT NOT NULL,
-Tanggal INTEGER NOT NULL,
-Waktu INTEGER NOT NULL,
+Tanggal TEXT NOT NULL,
+Waktu TEXT NOT NULL
 );
 
 CREATE TABLE db_absen_keluar (
-ID INTEGER PRIMARY KEY AUTOINCREMENT,
-NIP INTEGER NOT NULL,
 Nama TEXT NOT NULL,
-Tanggal INTEGER NOT NULL,
-Waktu TEXT NOT NULL,
+Tanggal TEXT NOT NULL,
+Waktu TEXT NOT NULL
 );
+
+--- INSERT INTO db_absen_masuk (Nama, Tanggal, Waktu) VALUES ('Bayu', '{datetime(now)}', '{datetime(now)}');

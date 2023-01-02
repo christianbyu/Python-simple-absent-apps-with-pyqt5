@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>210</y>
+     <y>170</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -26,37 +26,11 @@
     <string>Submit</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="nip">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>10</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NIP</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>40</y>
+     <y>20</y>
      <width>81</width>
      <height>16</height>
     </rect>
@@ -69,7 +43,7 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>210</y>
+     <y>170</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -82,7 +56,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>40</y>
+     <y>20</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -95,7 +69,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>90</y>
+     <y>70</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -108,7 +82,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>90</y>
+     <y>70</y>
      <width>81</width>
      <height>16</height>
     </rect>
@@ -121,7 +95,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>140</y>
+     <y>120</y>
      <width>81</width>
      <height>16</height>
     </rect>
@@ -134,7 +108,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>140</y>
+     <y>120</y>
      <width>161</width>
      <height>20</height>
     </rect>
@@ -147,26 +121,26 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>70</y>
+     <y>50</y>
      <width>151</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Contoh : 10 01 2022</string>
+    <string>Contoh : 10012022</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>120</y>
+     <y>100</y>
      <width>151</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Contoh : 07, 20, 24</string>
+    <string>Contoh : 07-00</string>
    </property>
   </widget>
  </widget>

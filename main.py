@@ -73,26 +73,28 @@ class Masuk(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
     
     def Submit(self):
-        nip=self.nip.setInputMask("00")
         nama=self.nama.text()
-        tanggal=self.tanggal.setInputMask("00/00/0000")
-        waktu=self.waktu.setInputMask("00:00")
+        tanggal=self.tanggal.text()
+        waktu=self.waktu.text()
         # Apabila email dan password kosong atau NULL
-        if nip==''or nama=='' or tanggal=='' or waktu=='':
+        if nama=='' or tanggal=='' or waktu=='':
             print("Data tidak boleh Kosong!!!")
         else:
         # Open database
             conn = sqlite3.connect('./database/db_absen.db')
             print("Berhasil terkoneksi ke DB")
         # Insert query
-        cursor = conn.execute("INSERT INTO db_user (NIP, Nama, Email, Passwd) VALUES",(nip,nama,tanggal,waktu))
+        query = "INSERT INTO db_absen_masuk (Nama, Tanggal, Waktu) VALUES ('"+nama+"', '"+tanggal+"', '"+waktu+"')"
+        cursor = conn.execute(query)
+        conn.commit()
         # Fetch data 
         if cursor.fetchone():
+            print("Absensi Gagal!!!")
+        else:
+            print("Absensi Berhasil!!!")
             submit=Result() 
             widget.addWidget(submit)
             widget.setCurrentIndex(widget.currentIndex()+1)
-        else:
-            print("Masukan data dengan Benar!!!")
 
 # Fungsi pada keluar.ui
 class Keluar(QDialog):
@@ -108,9 +110,28 @@ class Keluar(QDialog):
         widget.setCurrentIndex(widget.currentIndex()+1)
 
     def Submit(self):
-        submit=Result() 
-        widget.addWidget(submit)
-        widget.setCurrentIndex(widget.currentIndex()+1)
+        nama=self.nama.text()
+        tanggal=self.tanggal.text()
+        waktu=self.waktu.text()
+        # Apabila email dan password kosong atau NULL
+        if nama=='' or tanggal=='' or waktu=='':
+            print("Data tidak boleh Kosong!!!")
+        else:
+        # Open database
+            conn = sqlite3.connect('./database/db_absen.db')
+            print("Berhasil terkoneksi ke DB")
+        # Insert query
+        query = "INSERT INTO db_absen_keluar (Nama, Tanggal, Waktu) VALUES ('"+nama+"', '"+tanggal+"', '"+waktu+"')"
+        cursor = conn.execute(query)
+        conn.commit()
+        # Fetch data 
+        if cursor.fetchone():
+            print("Absensi Gagal!!!")
+        else:
+            print("Absensi Berhasil!!!")
+            submit=Result() 
+            widget.addWidget(submit)
+            widget.setCurrentIndex(widget.currentIndex()+1)
 
 # Fungsi pada result.ui
 class Result(QDialog):
