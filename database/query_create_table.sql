@@ -22,8 +22,4 @@ CREATE TABLE db_absen_keluar (
 Nama TEXT NOT NULL,
 Tanggal TEXT NOT NULL,
 Waktu TEXT NOT NULL
-);		
---- Ignore This!!! ---
---- INSERT INTO db_absen_masuk (Nama, Tanggal, Waktu) VALUES ('{nama}', '{tanggal}', '{waktu}')
-
---- INSERT INTO db_absen_masuk (Nama, Tanggal, Waktu) VALUES ('Bayu', '{datetime(now)}', '{datetime(now)}');
+);
