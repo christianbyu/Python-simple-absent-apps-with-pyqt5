@@ -27,4 +27,4 @@ pip install pyqt5-tools
 
 1. run ```main.py``` file, and you can get display like this ....
 
-image.png
+![image](https://user-images.githubusercontent.com/53118499/210207478-86a55911-d2c5-467b-bf60-4b8a5f53507d.png)
