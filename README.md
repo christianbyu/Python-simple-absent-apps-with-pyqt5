@@ -1,4 +1,4 @@
-# simple-absent-apps-with-pyqt5
+# Simple-absent-apps-with-pyqt5
 
 # Dependencies
 
