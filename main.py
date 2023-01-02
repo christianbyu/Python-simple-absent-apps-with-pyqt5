@@ -151,17 +151,43 @@ class CreateAcc(QDialog):
         super(CreateAcc,self).__init__()
         loadUi("createacc_baru.ui",self)
         self.signupbutton.clicked.connect(self.createaccfunction)
-        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.confirmpass.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.KKembali.clicked.connect(self.BackLogin)
+        self.passwrd.setEchoMode(QtWidgets.QLineEdit.Password)
+
+    def BackLogin(self):
+        backlogin=Login() 
+        widget.addWidget(backlogin)
+        widget.setCurrentIndex(widget.currentIndex()+1)
 
     def createaccfunction(self):
-        email = self.email.text()
-        if self.password.text()==self.confirmpass.text():
-            password=self.password.text()
-            print("Successfully created acc with email: ", email, "and password: ", password)
-            login=Login()
+        nama=self.nama.text()
+        email=self.email.text()
+        passwrd=self.passwrd.text()
+        # Apabila email dan password kosong atau NULL
+        if nama=='' or email=='' or passwrd=='':
+            print("Data tidak boleh Kosong!!!")
+        else:
+        # Open database
+            conn = sqlite3.connect('./database/db_absen.db')
+            print("Berhasil terkoneksi ke DB")
+        # Insert query
+        query = "INSERT INTO db_user(Nama, Email, Passwd) VALUES ('"+nama+"', '"+email+"', '"+passwrd+"')"
+        cursor = conn.execute(query)
+        conn.commit()
+        # Fetch data 
+        if cursor.fetchone():
+            print("Absensi Gagal!!!")
+        else:
+            print("Absensi Berhasil!!!")
+            login=Login() 
             widget.addWidget(login)
             widget.setCurrentIndex(widget.currentIndex()+1)
+        #if self.password.text()==self.confirmpass.text():
+        #    password=self.password.text()
+        #    print("Successfully created acc with email: ", email, "and password: ", password)
+        #    login=Login()
+        #    widget.addWidget(login)
+        #    widget.setCurrentIndex(widget.currentIndex()+1)
 
 
 

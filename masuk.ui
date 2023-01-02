@@ -127,7 +127,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Contoh : 10012022</string>
+    <string>Contoh : 10/01/2022</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">

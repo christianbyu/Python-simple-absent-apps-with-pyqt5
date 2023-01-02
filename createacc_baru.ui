@@ -13,16 +13,6 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLineEdit" name="email">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>10</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
@@ -36,34 +26,11 @@
     <string>Email</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>110</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Username</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="password">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>110</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>150</y>
+     <y>100</y>
      <width>91</width>
      <height>16</height>
     </rect>
@@ -72,12 +39,12 @@
     <string>Password</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="confirmpass">
+  <widget class="QLineEdit" name="passwrd">
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>150</y>
-     <width>151</width>
+     <y>100</y>
+     <width>161</width>
      <height>20</height>
     </rect>
    </property>
@@ -86,7 +53,7 @@
    <property name="geometry">
     <rect>
      <x>140</x>
-     <y>190</y>
+     <y>140</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -108,37 +75,50 @@
     <string>Nama</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>10</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NIP</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="email_2">
+  <widget class="QLineEdit" name="nama">
    <property name="geometry">
     <rect>
      <x>140</x>
      <y>40</y>
-     <width>151</width>
+     <width>161</width>
      <height>20</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="email_3">
+  <widget class="QLineEdit" name="email">
    <property name="geometry">
     <rect>
      <x>140</x>
      <y>70</y>
-     <width>151</width>
+     <width>161</width>
      <height>20</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="KKembali">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>140</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Kembali</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>10</y>
+     <width>61</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SIgn Up</string>
    </property>
   </widget>
  </widget>
