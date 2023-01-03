@@ -10,7 +10,7 @@ from PyQt5.uic import loadUi
 class Login(QDialog):
     def __init__(self):
         super(Login,self).__init__()
-        loadUi("login_baru.ui",self)
+        loadUi("./assets/login_baru.ui",self)
         self.loginbutton.clicked.connect(self.loginfunction)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.createaccbutton.clicked.connect(self.gotocreate)
@@ -45,7 +45,7 @@ class Login(QDialog):
 class Pilihan(QDialog):
     def __init__(self):
         super(Pilihan,self).__init__()
-        loadUi("pilihan.ui",self)
+        loadUi("./assets/pilihan.ui",self)
         self.AbsenMasuk.clicked.connect(self.Masuk)
         self.AbsenKeluar.clicked.connect(self.Keluar)
 
@@ -63,7 +63,7 @@ class Pilihan(QDialog):
 class Masuk(QDialog):
     def __init__(self):
         super(Masuk,self).__init__()
-        loadUi("masuk.ui",self)
+        loadUi("./assets/masuk.ui",self)
         self.MKembali.clicked.connect(self.Back)
         self.MSubmit.clicked.connect(self.Submit)
     
@@ -100,7 +100,7 @@ class Masuk(QDialog):
 class Keluar(QDialog):
     def __init__(self):
         super(Keluar,self).__init__()
-        loadUi("keluar.ui",self)
+        loadUi("./assets/keluar.ui",self)
         self.KKembali.clicked.connect(self.Back)
         self.KSubmit.clicked.connect(self.Submit)
 
@@ -137,7 +137,7 @@ class Keluar(QDialog):
 class Result(QDialog):
     def __init__(self):
         super(Result,self).__init__()
-        loadUi("result.ui",self)
+        loadUi("./assets/result.ui",self)
         self.KembaliLogin.clicked.connect(self.BackLogin)
     
     def BackLogin(self):
@@ -149,7 +149,7 @@ class Result(QDialog):
 class CreateAcc(QDialog):
     def __init__(self):
         super(CreateAcc,self).__init__()
-        loadUi("createacc_baru.ui",self)
+        loadUi("./assets/createacc_baru.ui",self)
         self.signupbutton.clicked.connect(self.createaccfunction)
         self.KKembali.clicked.connect(self.BackLogin)
         self.passwrd.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -176,9 +176,9 @@ class CreateAcc(QDialog):
         conn.commit()
         # Fetch data 
         if cursor.fetchone():
-            print("Absensi Gagal!!!")
+            print("Sign Up Gagal!!!")
         else:
-            print("Absensi Berhasil!!!")
+            print("Sign Up Berhasil!!!")
             login=Login() 
             widget.addWidget(login)
             widget.setCurrentIndex(widget.currentIndex()+1)
