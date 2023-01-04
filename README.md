@@ -73,9 +73,8 @@ SELECT * FROM db_user;
     
     - Before
     
-    ./pic/before_1.png
+    ![before_1](https://user-images.githubusercontent.com/53118499/210569316-63ee87a5-b046-4f39-938f-9ed2a209a92a.png)
 
-    
     - After
 
-    ./pic/before_1.png
+    ![image](https://user-images.githubusercontent.com/53118499/210569240-e8754782-c382-48f2-84ad-c87e595202d0.png)
