@@ -73,9 +73,9 @@ SELECT * FROM db_user;
     
     - Before
     
-    ./pic/before_1
+    ./pic/before_1.png
 
     
     - After
-    
-    ./pic/before_1
+
+    ./pic/before_1.png
