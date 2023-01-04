@@ -29,3 +29,31 @@ pip install pyqt5-tools
 1. run ```main.py``` file, and you can get display like this ....
 
 ![image](https://user-images.githubusercontent.com/53118499/210207478-86a55911-d2c5-467b-bf60-4b8a5f53507d.png)
+
+2. Login with default username and Password ```Admin@google.com``` and ```Admin```.
+
+3. Choose ```Absen Masuk```, the fullfil the data.
+
+Example :
+
+4. Choose ```Submit``` to input data to the database,  then choose ```KembaliLogin``` for Logout.
+
+# How to see the data
+
+1. To see ```Absen Masuk``` data .. check it on table ```db_absen_masuk```. or use this query :
+
+```
+SELECT * FROM db_absen_masuk;
+```
+
+2. To see ```Absen Kelur``` data .. check it on table ```db_absen_keluar```. or use this query :
+
+```
+SELECT * FROM db_absen_keluar;
+```
+
+3. To see ```Sign Up``` data or data for ```log In``` .. check it on table ```db_user```. or use this query :
+
+```
+SELECT * FROM db_user;
+```

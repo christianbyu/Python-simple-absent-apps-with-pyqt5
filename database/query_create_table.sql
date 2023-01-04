@@ -7,7 +7,7 @@ Email TEXT NOT NULL,
 Passwd TEXT NOT NULL
 );
 
---- Create Admin user Manually
+--- Query Create Admin user Manually
 INSERT INTO db_user (Nama, Email, Passwd) VALUES ('Admin', 'Admin@google.com', 'Admin');
 
 --- Query for Create table db_absen_masuk
