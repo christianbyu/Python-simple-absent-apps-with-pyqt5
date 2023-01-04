@@ -37,11 +37,11 @@ pip install pyqt5-tools
 
 2. Login with default username and Password ```Admin@google.com``` and ```Admin```.
 
-3. Choose ```Absen Masuk```, the fullfil the data.
-
-Example :
+3. Choose ```Absen Masuk``` or ```Absen Masuk```, then fullfil the data.
 
 4. Choose ```Submit``` to input data to the database,  then choose ```KembaliLogin``` for Logout.
+
+5. If you want to add new account go to ```Sign Up``` Menu, after you logout or close the apps the run again the ```main.py```.
 
 # How to See the Data
 
@@ -68,3 +68,14 @@ SELECT * FROM db_user;
 1. Install dbeaver first
 
 2. See data table on menu ```data```. Update the data then save with choose ```save``` or ```ctrl + s```.
+
+    Example :
+    
+    - Before
+    
+    ./pic/before_1
+
+    
+    - After
+    
+    ./pic/before_1
