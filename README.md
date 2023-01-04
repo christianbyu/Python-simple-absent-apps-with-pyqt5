@@ -6,6 +6,11 @@
 - pyqt5
 - sqlite3
 
+# Tools
+- Visual Studio Code
+- QT Designer
+- Dbeaver
+
 # Installation
 
 1. Install the pyqt5 using pip
@@ -38,7 +43,7 @@ Example :
 
 4. Choose ```Submit``` to input data to the database,  then choose ```KembaliLogin``` for Logout.
 
-# How to see the data
+# How to See the Data
 
 1. To see ```Absen Masuk``` data .. check it on table ```db_absen_masuk```. or use this query :
 
@@ -57,3 +62,9 @@ SELECT * FROM db_absen_keluar;
 ```
 SELECT * FROM db_user;
 ```
+
+# How to Update the Data
+
+1. Install dbeaver first
+
+2. See data table on menu ```data```. Update the data then save with choose ```save``` or ```ctrl + s```.
