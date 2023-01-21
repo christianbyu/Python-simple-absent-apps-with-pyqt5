@@ -48,11 +48,26 @@ class Pilihan(QDialog):
         loadUi("./assets/pilihan.ui",self)
         self.AbsenMasuk.clicked.connect(self.Masuk)
         self.AbsenKeluar.clicked.connect(self.Keluar)
+        self.ListAbsenMasuk.clicked.connect(self.ListMasuk)
+        self.ListAbsenKeluar.clicked.connect(self.Keluar)
 
     def Masuk(self):
         masuk=Masuk() 
         widget.addWidget(masuk)
         widget.setCurrentIndex(widget.currentIndex()+1)
+    
+    def ListMasuk(self):
+        listmasuk=Masuk() 
+        widget.addWidget(listmasuk)
+        widget.setCurrentIndex(widget.currentIndex()+1)
+        
+        isidata=self.isidata.text()
+        # Open database
+        conn = sqlite3.connect('./database/db_absen.db')
+        print("Berhasil terkoneksi ke DB")
+        # Select query
+        cursor = conn.execute('SELECT * from db_absen_masuk',(isidata))
+        # Fetch data 
 
     def Keluar(self):
         keluar=Keluar() 
